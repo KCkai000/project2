@@ -1,6 +1,5 @@
 package com.example.demo.model.entity;
 
-import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,8 +26,8 @@ public class User {
 	private Integer userId;  //使用者id
 	@Column(name="name", unique = true, nullable = false, length =60)
 	private String username; //使用者帳號
-	@Column(name = "account", length = 30, nullable = false)
-	private String userAccount; // 使用者信箱
+//	@Column(name = "account", length = 30, nullable = false)
+//	private String userAccount; // 使用者信箱
 	@Column(name= "password", nullable = false)
 	private String passwordHash; //使用者密碼
 	@Column(name = "salt", nullable = false)
