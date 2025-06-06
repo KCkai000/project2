@@ -1,8 +1,9 @@
 package com.example.demo.model.entity;
 
-import java.awt.Desktop.Action;
 
+import com.example.demo.enums.Action;
 import com.example.demo.enums.State;
+import com.example.demo.enums.Status;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -29,7 +30,7 @@ public class Flow {
 	private String flowType;
 	
 	@Enumerated(EnumType.STRING)
-	private State state;
+	private Status status;
 	
 	@Enumerated(EnumType.STRING)
 	private Action action;

@@ -1,14 +1,14 @@
 package com.example.demo.model.entity;
 
-import com.example.demo.enums.Action;
+import java.time.LocalDateTime;
 
-import jakarta.persistence.Column;
+import com.example.demo.enums.State;
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,17 +17,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class ApplicationForm {  //這個是流程控制用的，資料放在ApplicationFormDetail
+public class ApplicationFormDetail {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "flow_state")
-	private String flowState;
+	@OneToOne
+	private ApplicationForm applicationForm;
 	
-	@Enumerated(EnumType.STRING)
-	private Action action;
+	private State leaveType;
 	
+	private LocalDateTime startDate;
 	
+	private LocalDateTime endDate;
 }

@@ -4,11 +4,11 @@ import lombok.Getter;
 
 @Getter
 public enum State {
-	TYPE_1(1, "事假"),
-	TYPE_2(2, "病假"),
-	TYPE_3(3, "特休假"),
-	TYPE_4(4, "喪假"),
-	TYPE_5(5, "公假");
+	PERSONAL_LEAVE(1, "事假"),    
+	SICK_LEAVE(2, "病假"),    //SICK_LEANE =2
+	ANNUAL_LEAVE(3, "特休假"),  //ANNUAL_LEAVE = 3
+	FUNERAL_LEAVE(4, "喪假"),   //FUNERAL_LEAVE = 4
+	OFFCIAL_LEAVE(5, "公假");   //OFFCIAL_LEAVE = 5
 	
 	
 	private final Integer code;
